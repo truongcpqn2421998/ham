@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    Input=prompt('Nhập ký tự:')
+    if (check(Input)){
+        alert('Là ký tự số')
+    }else {
+        alert('Không phải ký tự số')
+    }
+    function check(n) {
+        n=parseInt(n)
+        for (let i=0;i<10;i++) {
+            if (n===i){
+                return true
+            }
+        }
+        return false
+    }
+</script>
+</body>
+</html>

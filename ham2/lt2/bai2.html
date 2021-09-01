@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let radius= prompt('Radius:')
+    alert('Diện tích của hình tròn có bán kính bằng '+radius+' là '+area(radius))
+    alert('Chu vi của hình tròn có bán kính bằng '+radius+' là '+circumference(radius))
+    function area(n) {
+        n=parseFloat(n)
+        return Math.PI*n*n
+    }
+    function circumference(n) {
+        n=parseFloat(n)
+        return 2*Math.PI*n
+    }
+</script>
+</body>
+</html>

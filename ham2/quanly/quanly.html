@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="Show()">
+<label for="add">Add New Product</label>
+<br>
+<input type="text" id="add" >
+<input type="button" style="background-color: limegreen;color: white" value="Add" onclick="add()">
+<p id="sum"></p>
+<p id="1"></p>
+<script>
+let product=['Sony Xperia','Samsung galaxy']
+document.getElementById('sum').innerText='Tổng số sản phẩm '+product.length
+function Show(){
+    let list='<table>'
+    for (let i=0;i<product.length;i++) {
+        list=list+'<tr>'
+        list=list+'<td>'+product[i]+'</td>'
+        list=list+'<td>'+'<input type="button" value="edit"onclick="create('+i+')">'+'</td>'
+        list=list+'<td>'+'<input type="button" value="delete" onclick="delete_product('+i+')">'+'</td>'
+        list=list+'</tr>'
+    }
+    list =list+'</table>'
+    document.getElementById('1').innerHTML=list
+}
+function add(){
+    let add = document.getElementById('add').value;
+    product.push(add)
+    Show()
+}
+function create(index) {
+    let edit= prompt('Nhập sản phẩm mới',product[index]);
+    product[index]=edit;
+    Show()
+}
+function delete_product(index) {
+    product.splice(index,1);
+    Show()
+}
+</script>
+</body>
+</html>

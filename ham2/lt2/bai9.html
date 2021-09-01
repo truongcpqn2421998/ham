@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let arr=[1,2,3,4,5,3]
+    let a=prompt('Nhập')
+    if (check(arr,a)===-1) {
+        alert('Không trùng')
+    } else {
+        alert('có '+check(arr,a)+' lần xuất hiên')
+    }
+    function check(arr,a) {
+        let total=0
+        a=parseInt(a)
+        for (let i =0;i<arr.length;i++) {
+            if (arr[i]===a){
+              total+=1
+            }
+        }
+        if(total===0){
+            return -1
+        }else {
+            return total
+        }
+
+    }
+</script>
+</body>
+</html>

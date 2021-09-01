@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label for="this_is_feet">chuyển từ feet sang meter</label>
+<br>
+<input type="number" id="this_is_feet" oninput="feettometer(this.value)"> feet
+<p id="meter"></p>
+<label for="this_is_meter">chuyển từ meter sang feet</label>
+<br>
+<input type="number" id="this_is_meter" oninput="metertofeet(this.value)"> meter
+<p id="feet"></p>
+<script>
+  function feettometer(n) {
+      n=parseFloat(n)
+      document.getElementById('meter').innerText=n*0.305+' meter'
+  }
+  function metertofeet(n) {
+      n=parseFloat(n)
+      document.getElementById('feet').innerText=n*3.279+' feet'
+  }
+</script>
+</body>
+</html>

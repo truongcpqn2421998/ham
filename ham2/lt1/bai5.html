@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<label for="star">Nhập tên ngoôi sao</label>
+<br>
+<input type="text" id="star" oninput="check(this.value)" >
+<p id="constellation"></p>
+<script>
+    let arr_1=['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus']
+    let arr_2= ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo']
+    function check(n) {
+        let total=0
+    for (let i=0;i<arr_1.length;i++) {
+        if (arr_1[i]===n) {
+            document.getElementById('constellation').innerText=arr_2[i]
+            total=1
+        }
+    }
+    if (total===0) {
+        document.getElementById('constellation').innerText='Không tìm thấy tên chòm sao'
+    }
+    }
+</script>
+</body>
+</html>

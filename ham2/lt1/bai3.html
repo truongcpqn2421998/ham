@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function input() {
+        let a=prompt('input a:')
+        let b=prompt('input b:')
+        if (check(a,b)===false) {
+            alert(b+' lớn hơn '+a)
+        } else {
+            alert('Tổng của 2 số là '+check(a,b))
+        }
+    }
+    function check(a,b) {
+        a=parseInt(a)
+        b=parseInt(b)
+        if (a<b) {
+            return false
+        }else {
+            let total=a+b
+            return (total)
+        }
+    }
+    input()
+</script>
+</body>
+</html>

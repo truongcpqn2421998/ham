@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let test=prompt('Nhập chuỗi cần kiểm tra')
+    if (check_palindrome(test)){
+        alert(test+' là một chuỗi palindrome')
+    } else {
+        alert(test+' Không phải chuỗi palindrome')
+    }
+    function check_palindrome(n) {
+        let first=0;
+        let last=n.length-1
+        while (first<last) {
+            if (n[first] !== n[last]) {
+                return false
+            }
+            first++
+            last--
+        }
+        return true
+    }
+</script>
+</body>
+</html>
